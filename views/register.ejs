@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<body>
+    <h1>New User Registration</h1>
+
+    <div>
+        <form action="/register" method="POST">
+            <div>
+                <label for="passcode">Passcode:</label>
+                <input type="text" name="passcode" required>
+            </div>
+
+            <div>
+                <label for="fname">First Name:</label>
+                <input type="text" name="fname" required>
+            </div>
+
+            <div>
+                <label for="lname">Last Name:</label>
+                <input type="text" name="lname" required>
+            </div>
+
+            <div>
+                <label for="email">E-Mail Address:</label>
+                <input type="email" name="email" required>
+            </div>
+
+            <div>
+                <label for="mobile">Mobile Number:</label>
+                <input type="text" name="mobile" maxlength="10">
+            </div>
+
+            <div>
+                <label for="uname">Username:</label>
+                <input type="text" name="uname" required>
+            </div>
+
+            <div>
+                <label for="pwd">Password:</label>
+                <input type="text" name="pwd" required>
+            </div>
+
+            <div>
+                <label for="confirmpwd">Confirm Password:</label>
+                <input type="text" name="confirmpwd" required>
+            </div>
+
+            <div>
+                <button type="submit" name="register">Register</button>
+            </div>
+        </form>
+    </div>
+
+</body>
