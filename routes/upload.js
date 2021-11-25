@@ -14,12 +14,13 @@ const storage = multer.diskStorage({
 const upload = multer({
     storage: storage,
     fileFilter: (req, file, cb) => {
-        if (path.extname(file.originalname) === '.glb') {
-            cb(null, true);
-        } else {
-            cb(null, false);
-            console.log("invalid file type")
-        }
+        var filetypes = /glb/;
+        var extname = filetypes.test(path.extname(
+            file.originalname).toLowerCase());
+            if (extname) {
+                return cb(null, true);
+            }
+            return cb(JSON.stringify({ "success": false, "message": "invalid file type" }), false);
     },
     limits: { fileSize: 250 * 1024 * 1024 },
 });
@@ -28,7 +29,7 @@ router.get('/', (req, res) => {
     res.render('upload');
 });
 
-router.post('/', upload.single('image'), (req, res, next) => {
+router.post('/', upload.single('model'), (req, res, next) => {
     // dont add data to db if file type is not .glb
     const obj = {
         name: req.body.name,
