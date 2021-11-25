@@ -10,40 +10,34 @@ const storage = multer.diskStorage({
         cb(null, file.originalname)
     }
 });
-  
-const upload = multer({ storage: storage,
-    fileFilter: (req, file, cb) =>{
-        if (path.extname(file.originalname) === '.glb'){
+
+const upload = multer({
+    storage: storage,
+    fileFilter: (req, file, cb) => {
+        if (path.extname(file.originalname) === '.glb') {
             cb(null, true);
-        } else{
+        } else {
             cb(null, false);
-            console.log("Invalid file type")
+            console.log("invalid file type")
         }
-    
     },
-    limits: {fileSize:  250 * 1024 * 1024},
+    limits: { fileSize: 250 * 1024 * 1024 },
 });
 
-
-
-  
-
 router.get('/', (req, res) => {
-    
-            res.render('upload');
-      
+    res.render('upload');
 });
 
 router.post('/', upload.single('image'), (req, res, next) => {
-  
+    // dont add data to db if file type is not .glb
     const obj = {
         name: req.body.name,
         desc: req.body.desc,
         creator: req.body.creator,
     }
     imgModel.create(obj, (err, item) => {
-            res.redirect('/');
-    }); 
+        res.redirect('/');
+    });
 });
 
 module.exports = router;
