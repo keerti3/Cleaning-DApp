@@ -13,29 +13,30 @@ router.get('/register', (req, res) => {
 
 router.post('/register', async(req, res) => {
     // if all good, store in db
+    const _id = req.body.email;
     const fname = req.body.fname;
     const lname = req.body.lname;
-    const email = req.body.email;
+    //const email = req.body.email;
     const mobile = req.body.mobile;
     const uname = req.body.uname;
-    const pwd = req.body.pwd;
+    const password = req.body.password;
     const confirmpwd = req.body.confirmpwd;
 
-    if (pwd != confirmpwd) {
+    mongoose.connect(process.env.DB_CONNECT, { useNewUrlParser: true }).then(() => {
+        console.log("connected to db");
+    });
+    if (password != confirmpwd) {
         console.log("password and confirm password do not match. try again");
         //res.redirect('/register')
     } else {
-        mongoose.connect(process.env.DB_CONNECT, { useNewUrlParser: true }).then(() => {
-            console.log("connected to db");
-        });
-
         const newUser = new User({
+            _id: req.body.email,
             firstname: req.body.fname,
             lastname: req.body.lname,
-            email: req.body.email,
+            //email: req.body.email,
             mobile: req.body.mobile,
             username: req.body.uname,
-            password: req.body.pwd
+            password: req.body.password
         });
 
         try {
@@ -44,6 +45,7 @@ router.post('/register', async(req, res) => {
                 res.redirect('/creator-login');
             });
         } catch (err) {
+            console.log(err);
             console.log("registration failed");
             res.redirect('/')
         }

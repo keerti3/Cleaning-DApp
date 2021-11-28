@@ -14,16 +14,13 @@ router.get('/creator-login', (req, res) => {
 
 router.post('/creator-login', async(req, res) => {
     // fetch user details from db
-    //const email = req.body.email;
-    const uname = req.body.uname;
-    const pwd = req.body.pwd;
 
     mongoose.connect(process.env.DB_CONNECT, { useNewUrlParser: true }).then(() => {
         console.log("connected to db");
     });
 
     try {
-        const user = await User.findOne({ username: req.body.uname, password: req.body.pwd });
+        const user = await User.findOne({ _id: req.body.email, password: req.body.password });
         console.log(user);
         if (user != null) {
             console.log("login sucess");
