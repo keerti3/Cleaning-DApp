@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const imgModel = require('../models/3dmodel');
+const Model = require('../models/3dmodel');
 const path = require('path');
 const multer = require('multer');
 const storage = multer.diskStorage({
@@ -36,7 +36,7 @@ router.post('/', upload.single('model'), (req, res, next) => {
         desc: req.body.desc,
         creator: req.body.creator,
     }
-    imgModel.create(obj, (err, item) => {
+    Model.create(obj, (err, item) => {
         res.redirect('/');
     });
 });
