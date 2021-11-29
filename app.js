@@ -5,6 +5,7 @@ app.set("view engine", "ejs");
 app.set('views', __dirname + '/views');
 
 app.use(express.static("public"))
+
 app.use(require('./routes/list'));
 app.use(require('./routes/index'));
 

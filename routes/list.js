@@ -1,13 +1,13 @@
-const Model = require('../models/3dmodel');
-const mongoose = require('mongoose');
+const model = require('../models/3dmodel');
 const express = require('express');
 const router = express.Router();
-router.use(express.json())
-
+router.use('/uploads', express.static('uploads'));
 router.get('/api/list',(req,res)=>{
     async function getModels(){
-        const models = await Model.find();//.select({name: 1, desc: 1, creator: 1})
-        res.send(models);
+       
+        const jsonmodel= await model.find(); 
+        //.select({name: 1, desc: 1, creator: 1}); 
+        res.send(JSON.stringify(jsonmodel));
     }
     getModels();
     
