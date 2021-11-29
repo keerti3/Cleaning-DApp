@@ -1,7 +1,8 @@
 const router = require('express').Router();
-const imgModel = require('../models/3dmodel');
+const Model = require('../models/3dmodel');
 const path = require('path');
 const multer = require('multer');
+const fs = require('fs');
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
         cb(null, 'uploads')
@@ -14,20 +15,36 @@ const storage = multer.diskStorage({
 const upload = multer({
     storage: storage,
     fileFilter: (req, file, cb) => {
-        var filetypes = /glb/;
+       /* var filetypes = /glb/;
         var extname = filetypes.test(path.extname(
             file.originalname).toLowerCase());
             if (extname) {
                 return cb(null, true);
             }
             return cb(JSON.stringify({ "success": false, "message": "invalid file type" }), false);
-    },
-    limits: { fileSize: 250 * 1024 * 1024 },
+
+        */
+            var filetypes = /glb/;
+            
+      
+            var extname = filetypes.test(path.extname(
+                        file.originalname).toLowerCase());
+            
+            if (extname) {
+                return cb(null, true);
+            }
+          
+            cb("Error: File upload only supports the "
+                    + "following filetypes - " + filetypes);
+          } 
+    ,
+    limits: { fileSize: 2500 * 1024 * 1024 },
 });
 
 router.get('/', (req, res) => {
     res.render('upload');
 });
+
 
 router.post('/', upload.single('model'), (req, res, next) => {
     // dont add data to db if file type is not .glb
@@ -35,8 +52,9 @@ router.post('/', upload.single('model'), (req, res, next) => {
         name: req.body.name,
         desc: req.body.desc,
         creator: req.body.creator,
+        location: 'http://localhost:5000/uploads/'+req.body.name+'.glb',
     }
-    imgModel.create(obj, (err, item) => {
+    Model.create(obj, (err, item) => {
         res.redirect('/');
     });
 });
