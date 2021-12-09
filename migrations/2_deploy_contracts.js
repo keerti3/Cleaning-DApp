@@ -1,4 +1,4 @@
-const ThreeDModel = artifacts.require('threed_model');
+const ThreeDModel = artifacts.require('./ThreeDModel.sol');
 
 module.exports = function(deployer) {
     deployer.deploy(ThreeDModel);
