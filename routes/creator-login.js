@@ -20,7 +20,7 @@ router.post('/creator-login', async(req, res) => {
     });
 
     try {
-        const user = await User.findOne({ _id: req.body.email, password: req.body.password });
+        const user = await User.findOne({ _id: req.body.uname, password: req.body.password });
         console.log(user);
         if (user != null) {
             console.log("login sucess");
