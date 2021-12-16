@@ -12,8 +12,8 @@ contract ThreeDModel{
     mapping(int => Model) public models;
 
     constructor() public {
-		addModel("rose", "hruthika");
-	}
+        addModel("rose", "hruthika");
+    }
 
     function addModel(string memory _name, string memory _owner) public {
         modelCount++;
