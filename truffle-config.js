@@ -18,7 +18,19 @@
  *
  */
 
-// const HDWalletProvider = require('@truffle/hdwallet-provider');
+const HDWalletProvider = require('@truffle/hdwallet-provider');
+require('dotenv').config(); // Load .env file
+
+const Web3 = require("web3");
+const ethEnabled = async() => {
+    if (window.ethereum) {
+        await window.ethereum.send('eth_requestAccounts');
+        window.web3 = new Web3(window.ethereum);
+        return true;
+    }
+    return false;
+}
+
 // const infuraKey = "fj4jll3k.....";
 //
 // const fs = require('fs');
@@ -46,6 +58,18 @@ module.exports = {
             host: "127.0.0.1", // Localhost (default: none)
             port: 7545, // Standard Ethereum port (default: none)
             network_id: 5777, // Any network (default: none)
+        },
+
+        poly_matic: {
+            provider: () => new HDWalletProvider(process.env.MNEMONIC, `https://rpc-mumbai.maticvigil.com`),
+            network_id: 80001,
+            from: 0x4a9b4e1b26bb5aa0A07Ac27abcd3Ff394536d51B,
+            confirmations: 2,
+            timeoutBlocks: 200,
+            skipDryRun: true,
+            gas: 6000000,
+            gasPrice: 10000000000,
+            networkCheckTimeout: 100000
         },
 
         // Another network with more advanced options...
