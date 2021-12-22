@@ -13,6 +13,8 @@ app.use(require('./routes/index'));
 app.use(require('./routes/register'));
 app.use(require('./routes/creator-login'));
 app.use(require('./routes/upload'));
-app.listen(5000, () => {
+
+app.listen(process.env.PORT || 5000, process.env.HOST || '0.0.0.0', () => {
+
     console.log("server up and running");
 });
