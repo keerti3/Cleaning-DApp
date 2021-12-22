@@ -51,7 +51,7 @@ router.post('/', upload.single('model'), (req, res, next) => {
         name: req.body.name,
         desc: req.body.desc,
         creator: req.body.creator,
-        location: 'http://13.235.246.18:5000/uploads/' + req.body.name + '.glb',
+        location: 'http://3.7.222.30:5000/uploads/' + req.body.name + '.glb',
     }
     Model.create(obj, (err, item) => {
         res.redirect('/');
