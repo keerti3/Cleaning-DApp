@@ -1,0 +1,742 @@
+{
+  "contractName": "ERCconnector",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "interfaceID",
+          "type": "bytes4"
+        }
+      ],
+      "name": "supportsInterface",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "name",
+      "outputs": [
+        {
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "totalSupply",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_from",
+          "type": "address"
+        },
+        {
+          "name": "_to",
+          "type": "address"
+        },
+        {
+          "name": "_tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "transferFrom",
+      "outputs": [],
+      "payable": true,
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "owner",
+          "type": "address"
+        },
+        {
+          "name": "index",
+          "type": "uint256"
+        }
+      ],
+      "name": "tokenOfOwnerByIndex",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "index",
+          "type": "uint256"
+        }
+      ],
+      "name": "tokenByIndex",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "ownerOf",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_owner",
+          "type": "address"
+        }
+      ],
+      "name": "balanceOf",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "name": "name",
+          "type": "string"
+        },
+        {
+          "name": "owner",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "_from",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "name": "_to",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "name": "_tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "Transfer",
+      "type": "event"
+    }
+  ],
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity >=0.4.22 <0.9.0;\r\nimport './ERCmetadata.sol';\r\nimport './ERC.sol';\r\nimport './ERCEnumerable.sol';\r\ncontract ERCconnector is ERCmetadata, ERCEnumerable{\r\n    constructor(string memory name, string memory owner) public ERCmetadata(name, owner){\r\n        \r\n    }\r\n}",
+  "sourcePath": "C:\\Users\\KEERTI\\Nodejs\\augmented_learning\\contracts\\ERCconnector.sol",
+  "ast": {
+    "absolutePath": "/C/Users/KEERTI/Nodejs/augmented_learning/contracts/ERCconnector.sol",
+    "exportedSymbols": {
+      "ERCconnector": [
+        345
+      ]
+    },
+    "id": 346,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 325,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".22",
+          "<",
+          "0.9",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:32:3"
+      },
+      {
+        "absolutePath": "/C/Users/KEERTI/Nodejs/augmented_learning/contracts/ERCmetadata.sol",
+        "file": "./ERCmetadata.sol",
+        "id": 326,
+        "nodeType": "ImportDirective",
+        "scope": 346,
+        "sourceUnit": 385,
+        "src": "34:27:3",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/C/Users/KEERTI/Nodejs/augmented_learning/contracts/ERC.sol",
+        "file": "./ERC.sol",
+        "id": 327,
+        "nodeType": "ImportDirective",
+        "scope": 346,
+        "sourceUnit": 128,
+        "src": "63:19:3",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/C/Users/KEERTI/Nodejs/augmented_learning/contracts/ERCEnumerable.sol",
+        "file": "./ERCEnumerable.sol",
+        "id": 328,
+        "nodeType": "ImportDirective",
+        "scope": 346,
+        "sourceUnit": 324,
+        "src": "84:29:3",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 329,
+              "name": "ERCmetadata",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 384,
+              "src": "140:11:3",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_ERCmetadata_$384",
+                "typeString": "contract ERCmetadata"
+              }
+            },
+            "id": 330,
+            "nodeType": "InheritanceSpecifier",
+            "src": "140:11:3"
+          },
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 331,
+              "name": "ERCEnumerable",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 323,
+              "src": "153:13:3",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_ERCEnumerable_$323",
+                "typeString": "contract ERCEnumerable"
+              }
+            },
+            "id": 332,
+            "nodeType": "InheritanceSpecifier",
+            "src": "153:13:3"
+          }
+        ],
+        "contractDependencies": [
+          127,
+          180,
+          323,
+          384,
+          427,
+          461
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 345,
+        "linearizedBaseContracts": [
+          345,
+          323,
+          127,
+          461,
+          180,
+          427,
+          384
+        ],
+        "name": "ERCconnector",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 343,
+              "nodeType": "Block",
+              "src": "257:18:3",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 344,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [
+              {
+                "arguments": [
+                  {
+                    "argumentTypes": null,
+                    "id": 339,
+                    "name": "name",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 334,
+                    "src": "245:4:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_memory_ptr",
+                      "typeString": "string memory"
+                    }
+                  },
+                  {
+                    "argumentTypes": null,
+                    "id": 340,
+                    "name": "owner",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 336,
+                    "src": "251:5:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_memory_ptr",
+                      "typeString": "string memory"
+                    }
+                  }
+                ],
+                "id": 341,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 338,
+                  "name": "ERCmetadata",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 384,
+                  "src": "233:11:3",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_type$_t_contract$_ERCmetadata_$384_$",
+                    "typeString": "type(contract ERCmetadata)"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "233:24:3"
+              }
+            ],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 337,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 334,
+                  "name": "name",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 344,
+                  "src": "185:18:3",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 333,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "185:6:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 336,
+                  "name": "owner",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 344,
+                  "src": "205:19:3",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 335,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "205:6:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "184:41:3"
+            },
+            "returnParameters": {
+              "id": 342,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "257:0:3"
+            },
+            "scope": 345,
+            "src": "173:102:3",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 346,
+        "src": "115:163:3"
+      }
+    ],
+    "src": "0:278:3"
+  },
+  "legacyAST": {
+    "absolutePath": "/C/Users/KEERTI/Nodejs/augmented_learning/contracts/ERCconnector.sol",
+    "exportedSymbols": {
+      "ERCconnector": [
+        345
+      ]
+    },
+    "id": 346,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 325,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".22",
+          "<",
+          "0.9",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:32:3"
+      },
+      {
+        "absolutePath": "/C/Users/KEERTI/Nodejs/augmented_learning/contracts/ERCmetadata.sol",
+        "file": "./ERCmetadata.sol",
+        "id": 326,
+        "nodeType": "ImportDirective",
+        "scope": 346,
+        "sourceUnit": 385,
+        "src": "34:27:3",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/C/Users/KEERTI/Nodejs/augmented_learning/contracts/ERC.sol",
+        "file": "./ERC.sol",
+        "id": 327,
+        "nodeType": "ImportDirective",
+        "scope": 346,
+        "sourceUnit": 128,
+        "src": "63:19:3",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/C/Users/KEERTI/Nodejs/augmented_learning/contracts/ERCEnumerable.sol",
+        "file": "./ERCEnumerable.sol",
+        "id": 328,
+        "nodeType": "ImportDirective",
+        "scope": 346,
+        "sourceUnit": 324,
+        "src": "84:29:3",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 329,
+              "name": "ERCmetadata",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 384,
+              "src": "140:11:3",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_ERCmetadata_$384",
+                "typeString": "contract ERCmetadata"
+              }
+            },
+            "id": 330,
+            "nodeType": "InheritanceSpecifier",
+            "src": "140:11:3"
+          },
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 331,
+              "name": "ERCEnumerable",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 323,
+              "src": "153:13:3",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_ERCEnumerable_$323",
+                "typeString": "contract ERCEnumerable"
+              }
+            },
+            "id": 332,
+            "nodeType": "InheritanceSpecifier",
+            "src": "153:13:3"
+          }
+        ],
+        "contractDependencies": [
+          127,
+          180,
+          323,
+          384,
+          427,
+          461
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 345,
+        "linearizedBaseContracts": [
+          345,
+          323,
+          127,
+          461,
+          180,
+          427,
+          384
+        ],
+        "name": "ERCconnector",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 343,
+              "nodeType": "Block",
+              "src": "257:18:3",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 344,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [
+              {
+                "arguments": [
+                  {
+                    "argumentTypes": null,
+                    "id": 339,
+                    "name": "name",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 334,
+                    "src": "245:4:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_memory_ptr",
+                      "typeString": "string memory"
+                    }
+                  },
+                  {
+                    "argumentTypes": null,
+                    "id": 340,
+                    "name": "owner",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 336,
+                    "src": "251:5:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_memory_ptr",
+                      "typeString": "string memory"
+                    }
+                  }
+                ],
+                "id": 341,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 338,
+                  "name": "ERCmetadata",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 384,
+                  "src": "233:11:3",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_type$_t_contract$_ERCmetadata_$384_$",
+                    "typeString": "type(contract ERCmetadata)"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "233:24:3"
+              }
+            ],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 337,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 334,
+                  "name": "name",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 344,
+                  "src": "185:18:3",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 333,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "185:6:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 336,
+                  "name": "owner",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 344,
+                  "src": "205:19:3",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 335,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "205:6:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "184:41:3"
+            },
+            "returnParameters": {
+              "id": 342,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "257:0:3"
+            },
+            "scope": 345,
+            "src": "173:102:3",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 346,
+        "src": "115:163:3"
+      }
+    ],
+    "src": "0:278:3"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.0+commit.1d4f565a.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.1",
+  "updatedAt": "2021-12-22T05:31:34.694Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

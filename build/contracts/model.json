@@ -1,0 +1,404 @@
+{
+  "contractName": "model",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "name",
+      "outputs": [
+        {
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function",
+      "signature": "0x06fdde03"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function",
+      "signature": "0x8da5cb5b"
+    },
+    {
+      "inputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor",
+      "signature": "constructor"
+    }
+  ],
+  "bytecode": "0x608060405234801561001057600080fd5b506040805190810160405280600581526020017f68656c656e0000000000000000000000000000000000000000000000000000008152506040805190810160405280600581526020017f6865617274000000000000000000000000000000000000000000000000000000815250818181600090805190602001906100959291906100b6565b5080600190805190602001906100ac9291906100b6565b505050505061015b565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106100f757805160ff1916838001178555610125565b82800160010185558215610125579182015b82811115610124578251825591602001919060010190610109565b5b5090506101329190610136565b5090565b61015891905b8082111561015457600081600090555060010161013c565b5090565b90565b6102e18061016a6000396000f3fe60806040526004361061004c576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806306fdde03146100515780638da5cb5b146100e1575b600080fd5b34801561005d57600080fd5b50610066610171565b6040518080602001828103825283818151815260200191508051906020019080838360005b838110156100a657808201518184015260208101905061008b565b50505050905090810190601f1680156100d35780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b3480156100ed57600080fd5b506100f6610213565b6040518080602001828103825283818151815260200191508051906020019080838360005b8381101561013657808201518184015260208101905061011b565b50505050905090810190601f1680156101635780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b606060008054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156102095780601f106101de57610100808354040283529160200191610209565b820191906000526020600020905b8154815290600101906020018083116101ec57829003601f168201915b5050505050905090565b606060018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156102ab5780601f10610280576101008083540402835291602001916102ab565b820191906000526020600020905b81548152906001019060200180831161028e57829003601f168201915b505050505090509056fea165627a7a723058207991bf8d022f970973e25f37f6d885b24739f7036a334397898e23dc1c979fd70029",
+  "deployedBytecode": "0x60806040526004361061004c576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806306fdde03146100515780638da5cb5b146100e1575b600080fd5b34801561005d57600080fd5b50610066610171565b6040518080602001828103825283818151815260200191508051906020019080838360005b838110156100a657808201518184015260208101905061008b565b50505050905090810190601f1680156100d35780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b3480156100ed57600080fd5b506100f6610213565b6040518080602001828103825283818151815260200191508051906020019080838360005b8381101561013657808201518184015260208101905061011b565b50505050905090810190601f1680156101635780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b606060008054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156102095780601f106101de57610100808354040283529160200191610209565b820191906000526020600020905b8154815290600101906020018083116101ec57829003601f168201915b5050505050905090565b606060018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156102ab5780601f10610280576101008083540402835291602001916102ab565b820191906000526020600020905b81548152906001019060200180831161028e57829003601f168201915b505050505090509056fea165627a7a723058207991bf8d022f970973e25f37f6d885b24739f7036a334397898e23dc1c979fd70029",
+  "sourceMap": "64:100:3:-;;;101:60;8:9:-1;5:2;;;30:1;27;20:12;5:2;101:60:3;106:102:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;178:4;184:5;235::1;229;:11;;;;;;;;;;;;:::i;:::-;;258:6;251;:13;;;;;;;;;;;;:::i;:::-;;157:115;;106:102:0;;64:100:3;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;",
+  "deployedSourceMap": "64:100:3:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;280:83:1;;8:9:-1;5:2;;;30:1;27;20:12;5:2;280:83:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;280:83:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;371:85;;8:9:-1;5:2;;;30:1;27;20:12;5:2;371:85:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;371:85:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;280:83;318:13;350:5;343:12;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;280:83;:::o;371:85::-;410:13;442:6;435:13;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;371:85;:::o",
+  "source": "pragma solidity >=0.4.22 <0.9.0;\r\nimport './ERCconnector.sol';\r\ncontract model is ERCconnector{\r\n    constructor() public ERCconnector('helen','heart'){\r\n\r\n    }\r\n}",
+  "sourcePath": "C:/Users/KEERTI/Nodejs/augmented_learning/contracts/model.sol",
+  "ast": {
+    "absolutePath": "/C/Users/KEERTI/Nodejs/augmented_learning/contracts/model.sol",
+    "exportedSymbols": {
+      "model": [
+        103
+      ]
+    },
+    "id": 104,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 91,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".22",
+          "<",
+          "0.9",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:32:3"
+      },
+      {
+        "absolutePath": "/C/Users/KEERTI/Nodejs/augmented_learning/contracts/ERCconnector.sol",
+        "file": "./ERCconnector.sol",
+        "id": 92,
+        "nodeType": "ImportDirective",
+        "scope": 104,
+        "sourceUnit": 18,
+        "src": "34:28:3",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 93,
+              "name": "ERCconnector",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 17,
+              "src": "82:12:3",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_ERCconnector_$17",
+                "typeString": "contract ERCconnector"
+              }
+            },
+            "id": 94,
+            "nodeType": "InheritanceSpecifier",
+            "src": "82:12:3"
+          }
+        ],
+        "contractDependencies": [
+          17,
+          56
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 103,
+        "linearizedBaseContracts": [
+          103,
+          17,
+          56
+        ],
+        "name": "model",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 101,
+              "nodeType": "Block",
+              "src": "151:10:3",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 102,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [
+              {
+                "arguments": [
+                  {
+                    "argumentTypes": null,
+                    "hexValue": "68656c656e",
+                    "id": 97,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "string",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "135:7:3",
+                    "subdenomination": null,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_stringliteral_51151ae29e617be71e82c17f4c78a3c6ef02bec4ac282029d54e1d3946d2552d",
+                      "typeString": "literal_string \"helen\""
+                    },
+                    "value": "helen"
+                  },
+                  {
+                    "argumentTypes": null,
+                    "hexValue": "6865617274",
+                    "id": 98,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "string",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "143:7:3",
+                    "subdenomination": null,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_stringliteral_601179b026949a93e5fe316204eff4b8b0d5e64cc9ffb5262a652c03f073315d",
+                      "typeString": "literal_string \"heart\""
+                    },
+                    "value": "heart"
+                  }
+                ],
+                "id": 99,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 96,
+                  "name": "ERCconnector",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 17,
+                  "src": "122:12:3",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_type$_t_contract$_ERCconnector_$17_$",
+                    "typeString": "type(contract ERCconnector)"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "122:29:3"
+              }
+            ],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 95,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "112:2:3"
+            },
+            "returnParameters": {
+              "id": 100,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "151:0:3"
+            },
+            "scope": 103,
+            "src": "101:60:3",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 104,
+        "src": "64:100:3"
+      }
+    ],
+    "src": "0:164:3"
+  },
+  "legacyAST": {
+    "absolutePath": "/C/Users/KEERTI/Nodejs/augmented_learning/contracts/model.sol",
+    "exportedSymbols": {
+      "model": [
+        103
+      ]
+    },
+    "id": 104,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 91,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".22",
+          "<",
+          "0.9",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:32:3"
+      },
+      {
+        "absolutePath": "/C/Users/KEERTI/Nodejs/augmented_learning/contracts/ERCconnector.sol",
+        "file": "./ERCconnector.sol",
+        "id": 92,
+        "nodeType": "ImportDirective",
+        "scope": 104,
+        "sourceUnit": 18,
+        "src": "34:28:3",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 93,
+              "name": "ERCconnector",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 17,
+              "src": "82:12:3",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_ERCconnector_$17",
+                "typeString": "contract ERCconnector"
+              }
+            },
+            "id": 94,
+            "nodeType": "InheritanceSpecifier",
+            "src": "82:12:3"
+          }
+        ],
+        "contractDependencies": [
+          17,
+          56
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 103,
+        "linearizedBaseContracts": [
+          103,
+          17,
+          56
+        ],
+        "name": "model",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 101,
+              "nodeType": "Block",
+              "src": "151:10:3",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 102,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [
+              {
+                "arguments": [
+                  {
+                    "argumentTypes": null,
+                    "hexValue": "68656c656e",
+                    "id": 97,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "string",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "135:7:3",
+                    "subdenomination": null,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_stringliteral_51151ae29e617be71e82c17f4c78a3c6ef02bec4ac282029d54e1d3946d2552d",
+                      "typeString": "literal_string \"helen\""
+                    },
+                    "value": "helen"
+                  },
+                  {
+                    "argumentTypes": null,
+                    "hexValue": "6865617274",
+                    "id": 98,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "string",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "143:7:3",
+                    "subdenomination": null,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_stringliteral_601179b026949a93e5fe316204eff4b8b0d5e64cc9ffb5262a652c03f073315d",
+                      "typeString": "literal_string \"heart\""
+                    },
+                    "value": "heart"
+                  }
+                ],
+                "id": 99,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 96,
+                  "name": "ERCconnector",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 17,
+                  "src": "122:12:3",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_type$_t_contract$_ERCconnector_$17_$",
+                    "typeString": "type(contract ERCconnector)"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "122:29:3"
+              }
+            ],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 95,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "112:2:3"
+            },
+            "returnParameters": {
+              "id": 100,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "151:0:3"
+            },
+            "scope": 103,
+            "src": "101:60:3",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 104,
+        "src": "64:100:3"
+      }
+    ],
+    "src": "0:164:3"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.0+commit.1d4f565a.Emscripten.clang"
+  },
+  "networks": {
+    "5777": {
+      "events": {},
+      "links": {},
+      "address": "0x9102c604131d81527FEB0849c33f700D72E50876",
+      "transactionHash": "0xbd2f3b151617d0b3590ea42257cfe3a71aa5277574c5f9167ebc30aed98a7000"
+    }
+  },
+  "schemaVersion": "3.0.1",
+  "updatedAt": "2021-12-19T12:42:21.423Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
