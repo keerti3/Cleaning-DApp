@@ -22,4 +22,4 @@ data/
 *.glb
 routes/learner-login-api.js
 ./vscode
-build/
+build/contracts/

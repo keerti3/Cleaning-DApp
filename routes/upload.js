@@ -15,29 +15,28 @@ const storage = multer.diskStorage({
 const upload = multer({
     storage: storage,
     fileFilter: (req, file, cb) => {
-       /* var filetypes = /glb/;
+        /* var filetypes = /glb/;
+         var extname = filetypes.test(path.extname(
+             file.originalname).toLowerCase());
+             if (extname) {
+                 return cb(null, true);
+             }
+             return cb(JSON.stringify({ "success": false, "message": "invalid file type" }), false);
+
+         */
+        var filetypes = /glb/;
+
+
         var extname = filetypes.test(path.extname(
             file.originalname).toLowerCase());
-            if (extname) {
-                return cb(null, true);
-            }
-            return cb(JSON.stringify({ "success": false, "message": "invalid file type" }), false);
 
-        */
-            var filetypes = /glb/;
-            
-      
-            var extname = filetypes.test(path.extname(
-                        file.originalname).toLowerCase());
-            
-            if (extname) {
-                return cb(null, true);
-            }
-          
-            cb("Error: File upload only supports the "
-                    + "following filetypes - " + filetypes);
-          } 
-    ,
+        if (extname) {
+            return cb(null, true);
+        }
+
+        cb("Error: File upload only supports the " +
+            "following filetypes - " + filetypes);
+    },
     limits: { fileSize: 2500 * 1024 * 1024 },
 });
 
@@ -52,7 +51,7 @@ router.post('/', upload.single('model'), (req, res, next) => {
         name: req.body.name,
         desc: req.body.desc,
         creator: req.body.creator,
-        location: 'http://localhost:5000/uploads/'+req.body.name+'.glb',
+        location: 'http://3.7.222.30:5000/uploads/' + req.body.name + '.glb',
     }
     Model.create(obj, (err, item) => {
         res.redirect('/');
