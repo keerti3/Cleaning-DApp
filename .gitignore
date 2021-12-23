@@ -18,8 +18,9 @@ bin-release/
 # information for Eclipse / Flash Builder.
 
 node_modules/
-data/
 *.glb
-routes/learner-login-api.js
+*.png
+*.jpg
+*.jpeg
 ./vscode
-build/
+build/contracts/
