@@ -44,7 +44,6 @@ router.get('/', (req, res) => {
     res.render('upload');
 });
 
-
 router.post('/', upload.single('model'), (req, res, next) => {
     // dont add data to db if file type is not .glb
     const obj = {
