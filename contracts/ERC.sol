@@ -2,10 +2,7 @@ pragma solidity >=0.4.22 <0.9.0;
 
 import './ERC165.sol';
 import './interfaces/IERC721.sol';
-contract ERC is ERC165, IERC721{
-    
-    
-    
+contract ERC is ERC165, IERC721{    
     //mapping from token id to owner
     mapping(uint256 => address) private _tokenOwner;
     

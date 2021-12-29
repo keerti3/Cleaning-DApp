@@ -6,17 +6,28 @@ contract ThreeDModel{
     struct Model{
         int id;
         string name;
-        string owner;
+        string creator;
     }
 
     mapping(int => Model) public models;
 
+    event ModelAdded(
+        int id,
+        string name,
+        string creator
+    );
+
     constructor() public {
-        addModel("rose", "hruthika");
+        //addModel("ice", "k");
     }
 
-    function addModel(string memory _name, string memory _owner) public {
+    /*function name1() external view returns(string memory){
+        return name;
+    }*/
+
+    function addModel(string memory _name, string memory _creator) public {
         modelCount++;
-        models[modelCount] = Model(modelCount, _name, _owner);
+        models[modelCount] = Model(modelCount, _name, _creator);
+        emit ModelAdded(modelCount,_name,_creator);
     }
 }

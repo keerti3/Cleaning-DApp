@@ -1,6 +1,7 @@
+
 pragma solidity >=0.4.22 <0.9.0;
 import './ERCconnector.sol';
-contract threedmodel is ERCconnector{
+contract ModelThreeD is ERCconnector{
     //array to store our nfts
     string[] public models;
     mapping(string => bool) _modelsExists;
@@ -12,7 +13,7 @@ contract threedmodel is ERCconnector{
         _mint(msg.sender, _id);
         _modelsExists[_models]=true;
     }
-    constructor() public ERCconnector('heart','helen'){
-
+    constructor() ERCconnector('heart','helen') public{
+        
     }
 }

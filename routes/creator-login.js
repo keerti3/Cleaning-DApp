@@ -1,6 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const User = require('../models/User');
+const User = require('../models/user');
 const router = require('express').Router();
 const dotenv = require('dotenv');
 
@@ -25,7 +25,7 @@ router.post('/creator-login', async(req, res) => {
         if (user != null) {
             console.log("login sucess");
             // redirect to upload form
-            res.render('upload');
+            res.redirect('/creator-login/upload');
         } else {
             console.log("user not registered or invalid credentials");
             res.redirect('/creator-login');

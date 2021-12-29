@@ -1,39 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-  
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Upload Form</title>
 </head>
-  
+
 <body>
-    
+
     <hr>
     <div>
-        <form action="/" method="POST" enctype="multipart/form-data">
+        <form action="/api/model/" method="POST" enctype="multipart/form-data">
             <div>
                 <label for="name">Model Title</label>
-                <input type="text" id="name" placeholder="title" 
-                       value="" name="name" required>
+                <input type="text" id="name" placeholder="title" value="" name="name" required>
             </div>
             <br><br><br>
             <div>
-                <label for="desc">Description</label><textarea id="desc" name="desc" value="" rows=3
-                placeholder="description" required></textarea>
-         
+                <label for="desc">Description</label><textarea id="desc" name="desc" value="" rows=3 placeholder="description" required></textarea>
+
             </div>
             <br><br><br>
             <div>
                 <label for="creator">Creator Name</label>
-                <input type="text" id="creator" placeholder="name" 
-                       value="" name="creator" required>
+                <input type="text" id="creator" placeholder="name" value="" name="creator" required>
             </div>
             <br><br><br>
             <div>
                 <label for="model">Upload Model</label>
-                <input type="file" id="model" 
-                       name="model" value="" required>
+                <input type="file" id="model" name="model" value="" required>
             </div>
             <br><br><br>
             <div>
@@ -41,12 +37,10 @@
             </div>
         </form>
     </div>
-  
+
     <hr>
-  
-  
+
+
 </body>
-  
+
 </html>
-
-
