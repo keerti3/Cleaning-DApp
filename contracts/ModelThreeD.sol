@@ -1,6 +1,6 @@
 pragma solidity >=0.4.22 <0.9.0;
 import './ERCconnector.sol';
-contract threedmodel is ERCconnector{
+contract ModelThreeD is ERCconnector{
     //array to store our nfts
     string[] public models;
     mapping(string => bool) _modelsExists;
